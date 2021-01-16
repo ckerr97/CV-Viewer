@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        {% if current_user.is_anonymous %}
+        {% include 'notLogged.html' %}
+        {% elif current_user.is_authenticated and current_user.is_admin %}
+        {% include 'loggedAdmin.html' %}
+        {% else %}
+        {% include 'loggedIndex.html' %}
+        {% endif %}
+   
+{% endblock %}

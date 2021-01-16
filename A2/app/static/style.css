@@ -1,0 +1,82 @@
+
+#Container{
+    margin: auto;
+    width: 950px;
+}
+
+
+#down {
+    margin-left: 5px;
+    float:left;
+}
+
+
+#review {
+    margin-right: 5px;
+    float: right;
+}
+
+h2 {
+    margin: auto;
+    
+}
+
+
+
+#contact {
+    margin-right: 10px;
+    float: right;
+}
+
+#tag {
+    text-align: center;
+}
+
+#contact p
+{
+    text-align: center;
+}
+#username_tag, #about, #login, #register, #edit_profile, #last_seen, #touch{
+    color: royalblue;
+}
+
+
+#Education, #Education2, #info, #work
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    
+}
+#profile h2 {
+    color: lightslategray;
+}
+
+#ref1
+{
+    float: left;
+}
+
+#ref2
+{
+    float: right;
+}
+
+#info ul li {
+    text-align: left;
+}
+
+#work h1, h2 {
+    text-align: left;
+}
+
+
+br {
+    clear: all;
+}
+
+
+#links, #welcome
+{
+    text-align: center;
+}

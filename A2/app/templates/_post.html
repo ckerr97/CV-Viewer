@@ -1,0 +1,18 @@
+<table class="table table-hover">
+    <tr>
+        <td width="70px">
+            <a href="{{ url_for('user', username=post.author.username) }}">
+                <img src="{{ post.author.avatar(70) }}" />
+            </a>
+            {{ moment(post.timestamp).format('LLL') }}
+        </td>
+        <td>
+            <a href="{{ url_for('user', username=post.author.username) }}">
+                {{ post.author.username }} </a> @ {{ post.author.company }}
+            says:
+            <br>
+            <em>{{ post.body }} </em><br> <br>
+            <strong>Rating: {{ post.rating }}/10 </strong>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,40 @@
+{% extends "admin/master.html" %}
+
+{% block access_control %}
+<a href="{{ url_for('logout') }}">Logout</a></li>
+{% endblock %}
+
+{% block body %}
+<h2> Hello {{ current_user.first_name }}, here are your current views and downloads for the week</h2>
+<br>
+<table style="width:35%" border="4" align="center" class="table">
+    <thead class="table table-dark" >
+      <tr>
+        <th>Views this Week</th>
+        <th>Downloads this Week</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ view_total }}</td>
+                <td>{{ download_total }}</td>
+                </tr>
+
+        </tbody>
+        </table>
+<h2><u> Links</u></h2>
+<ul>
+    <li><a href="{{ '/admin/user' }}">Detailed User Information</a> </li>
+    <li> <a href="{{ url_for('index') }}"> Return to index page</a></li>
+</ul>
+<hr>
+
+{% endblock %}
+
+
+
+
+
+
+
+

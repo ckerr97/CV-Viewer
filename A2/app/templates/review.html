@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h1>Thanks for taking a look at my CV. Please leave a comment and a rating out of 10.</h1>
+    <div class="col-md-4">
+        {{ wtf.quick_form(form) }}  
+        <h1 id="touch"> Get in touch</h1> 
+        <h2>Telephone: 07562249524</h2>
+        <br>
+        <h2>Email: <a href="mailto:cormackerr@hotmail.com">cormackerr@hotmail.com</a></h2>  
+        
+        
+</div>
+
+
+{% endblock %}

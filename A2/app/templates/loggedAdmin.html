@@ -1,0 +1,20 @@
+{% if not posts %}
+<h2>Hello {{ current_user.first_name }}, no-one has reviewed your CV, yet....</h2>
+{% else %}
+<h2> Hello {{ current_user.first_name }}, Below are comments that some employers have made on your CV with a rating out of 10. </h2>
+<br>
+<br>
+    {% for post in posts %}
+      {% include "_post.html" %}
+    {% endfor %}
+    <ul class="pager">
+    {% if prev_url %}
+    <li class="next"><a href="{{ prev_url }}">Newer Posts</a> </li>
+    {% endif %}
+    {% if next_url %}
+    <li class="previous"><a href="{{ next_url }}">Older Posts</a> </li>
+    </ul>
+    {% endif %}
+    {% endif %}
+
+

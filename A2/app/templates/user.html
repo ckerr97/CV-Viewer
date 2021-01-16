@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <tr>
+        <td><img src="{{ user.avatar(100) }}"><td>
+        <div id="profile">
+        <td><h2> <div id="username_tag">  Username: </div> {{ user.username }}</h2>  <br>
+        {% if user.about_me %} 
+        <h2><div id="about"> About Me: </div> {{ user.about_me }}</h2> <br>
+        {% endif %}
+        {% if user.last_seen %}
+        <h2><div id="last_seen">Last seen:</div></Last> {{ moment(user.last_seen).fromNow() }}</h2>
+        {% endif %}
+        </div>
+        {% if user == current_user %}
+        <br>
+        <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+        {% endif %}
+        </td>
+    </div>
+    </tr>
+</table>
+<br>
+<h2>Comments</h2>
+{% for post in posts %}
+{% include "_post.html" %}
+{% endfor %}
+<ul class="pager">
+    {% if prev_url %}
+    <li class="next"><a href="{{ prev_url }}">Newer Posts</a> </li>
+    {% endif %}
+    {% if next_url %}
+    <li class="previous"><a href="{{ next_url }}">Older Posts</a> </li>
+    </ul>
+    {% endif %}
+<hr>
+{% endblock %}
